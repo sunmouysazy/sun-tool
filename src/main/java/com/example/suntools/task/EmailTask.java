@@ -24,7 +24,7 @@ public class EmailTask {
     @Autowired
     private JavaMailSender jms;
 
-    @Scheduled(cron = "1/59 * * * * ?")
+    @Scheduled(cron = "0 30 7 ? * *")
     public void sendMail(EmailEntity emailEntity) {
         System.out.println("开始");
         ChinaDateEntity chinaDateEntity = ChinaDateTool.getBirthdayPerson();
